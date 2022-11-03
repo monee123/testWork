@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JS事件</title>
+	</head>
+	<body>
+		<img src="https://ts1.cn.mm.bing.net/th/id/R-C.7f466594ae2c4ff43408ea3cc7414ea6?rik=uK2vme6g%2bQfRug&riu=http%3a%2f%2fimage.qianye88.com%2fpic%2fa5e488188897992701244c8190a57d14&ehk=2Z%2bC1T1Blayu369QiLKrvFR28g10RkAQmHZGQgBoDr8%3d&risl=&pid=ImgRaw&r=0" style="width: 500px;height: 300px;"/><br />
+		<input type="text" id="inCh" onblur="change()">
+	</body>
+	<script>
+		function change(){
+			alert("你写了什么！")
+			var a = document.getElementById('inCh').value;
+			if(a!=null&&a!=""){
+				alert("你输入的值是："+a);
+			}
+		}
+	</script>
+</html>
