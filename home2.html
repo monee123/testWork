@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>登录</title>
+		<style>
+			a{
+				color: firebrick;
+			}
+			a:hover{
+				color: aqua;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="log">
+			<form>
+				<input name="userName" id="userName" placeholder="请输入用户名"/><br/>
+				<input name="password" id="password" type="password" placeholder="请输入密码"/><br/>
+				<button type="submit" onclick="login()">登录</button>
+				<br/>
+				<br/>
+				没有账号？<a href="home1.html" onclick="register()" >立即注册</a>
+			</form>
+		</div>
+	</body>
+	<script>
+		function login(){
+			var name = document.getElementById("userName").value;
+			confirm(document.getElementById("userName").value+"欢迎登录");
+		}
+	</script>
+</html>

@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册</title>
+		<style>
+			a{
+				color: firebrick;
+			}
+			a:hover{
+				color: aqua;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="log">
+			<form>
+				<input name="userName" id="userName" placeholder="请输入用户名"/><br/>
+				<input name="password" id="password" type="password" placeholder="请输入密码"/><br/>
+				<button type="submit" onclick="login()">注册</button>
+				<br/>
+				<br/>
+				<a href="home2.html">立即登录</a>
+			</form>
+		</div>
+	</body>
+	<script>
+		function login(){
+			confirm("注册成功");
+		}
+	</script>
+</html>
