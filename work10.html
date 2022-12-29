@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册页面</title>
+		<style>
+			body{
+				background-color: #1e9fff;
+			}
+			.p1{
+				font-size: 25px;
+				font-weight: 300px;
+				text-align: center;
+				color: #333;
+			}
+			a{
+				color: firebrick;
+			}
+			a:hover{
+				color: aqua;
+			}
+			.log{
+				background: rgba(18, 37, 18, .2);
+				width: 360px;
+				height: 420px;
+				padding: 50px 30px;
+				border-radius: 8px;
+				margin: auto;
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+			}
+			.log input{
+				width: 340px;
+				padding: 0 10px;
+				margin-bottom: 20px;
+				height: 55px;
+				line-height: 55px;
+				border: 0;
+				background: #f5f5f5;
+				font-size: 16px;
+				color: #666;
+			}
+			.log button{
+				display: inline-block;
+				height: 50px;
+				line-height: 50px;
+				width: 360px;
+				background-color: #1e9fff;
+				color: #fff;
+				font-size: 16px;
+				margin-top: 20px;
+				border: none;
+				border-radius: 2px;
+				cursor: pointer;
+			}
+			.log button:hover{
+				box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="log">
+			<form>
+				<h1 class="p1">欢迎注册</h1>
+				<input name="userName" id="userName" placeholder="请输入用户名" required/><br/>
+				<input name="password" id="password" type="password" placeholder="请输入密码" onblur="zz()" required/><br/>
+				<span style="color: red;" id="span1"></span>
+				<input name="newPassword" id="newpassword" type="password" placeholder="请再次输入密码" onblur="ss()" required/><br/>
+				<span style="color: red;" id="span2"></span>
+				<span style="color: red;" id="span3"></span>
+				<button type="submit" onclick="login()">注册</button>
+				<br/>
+				<br/>
+			</form>
+		</div>
+	</body>
+	<script>
+		function zz(){
+			var pass = /^\S{6,}$/;
+			var password = document.getElementById("password").value;
+			var a = document.getElementById("password");
+			if(password==""||!pass.test(password)){
+				document.getElementById("span1").innerHTML="请输入至少六位的密码";
+			}else{
+				document.getElementById("span1").innerHTML="";
+			}
+		}
+		function ss(){
+			var pass = /^\S{6,}$/;
+			var password = document.getElementById("newpassword").value;
+			var newpassword = document.getElementById("newpassword").value;
+			var a = document.getElementById("newpassword");
+			if(password==""||!pass.test(password)){
+				document.getElementById("span2").innerHTML="请输入至少六位的密码";
+			}else{
+				document.getElementById("span2").innerHTML="";
+			}
+		}
+		function login(){
+			var password = document.getElementById("password").value;
+			var newpassword = document.getElementById("newpassword").value;
+			if(password!=newpassword){
+				alert("两次输入密码不一致请重新输入！！！");
+			}
+		}
+	</script>
+</html>

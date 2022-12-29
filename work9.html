@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JS事件</title>
+	</head>
+	<body>
+		<img src="img/cc.jpg" style="width: 500px;height: 300px;"/><br />
+		<input type="text" id="inCh" onblur="change()">
+	</body>
+	<script>
+		function change(){
+			alert("你写了什么！")
+			var a = document.getElementById('inCh').value;
+			if(a!=null&&a!=""){
+				alert("你输入的值是："+a);
+			}
+		}
+	</script>
+</html>
